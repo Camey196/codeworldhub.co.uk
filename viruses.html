@@ -6,17 +6,19 @@
     <title>Viruses</title>
     <style>
         body {
-            background-color: black;
+            background-color: #000000;
             color: white;
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         .header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             padding: 20px;
             background-color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .header a {
             color: white;
@@ -24,46 +26,63 @@
             margin: 0 10px;
             padding: 10px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
         .header a:hover {
-            background-color: #555;
+            background-color: #333;
+            transform: scale(1.1);
         }
         .content {
-            padding: 20px;
-        }
-        .textbox {
-            background-color: #222;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-        .textbox h3 {
-            color: white;
-            margin: 0;
+            padding: 40px 20px;
         }
         .downloads {
-            margin-top: 20px;
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
         }
         .download-block {
-            background-color: gray;
+            background-color: #333;
             padding: 20px;
-            margin: 10px;
             border-radius: 10px;
-            font-size: 18px;
+            width: 300px; /* Adjusted width */
+            height: 300px; /* Adjusted height */
             text-align: center;
-            width: 700px; /* Increased width by 500px */
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .download-block:hover {
+            background-color: #555;
+            transform: scale(1.05);
         }
         .download-block a {
             color: white;
             text-decoration: none;
+            font-size: 1.2em;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: background-color 0.3s, transform 0.3s;
         }
-        .download-block:hover {
-            background-color: #555;
+        .download-block a:hover {
+            background-color: #777;
+            transform: scale(1.1);
+        }
+        .download-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: opacity 0.3s;
+        }
+        .download-block:hover img {
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -76,25 +95,26 @@
     </div>
     <div class="content">
         <h1>Viruses</h1>
-        <div class="textbox">
-            <h3>Read me</h3>
-            <h3>Please do not be worried about any of these viruses. They don't do much. If you want, set a restore point on your computer. (Also, DO NOT use these in a harmful way, they are just for fun) :)</h3>
-        </div>
         <div class="downloads">
             <div class="download-block">
-                <a href="virus1.zip" download>Download Virus 1</a>
+                <img src="https://as1.ftcdn.net/v2/jpg/00/17/07/00/1000_F_17070029_Z62HJJGugcErbh2ligzRIeg8iiVaZ6iy.jpg" alt="Crazy Mouse">
+                <a href="Crazy Mouse.exe" download>Crazy Mouse</a>
             </div>
             <div class="download-block">
-                <a href="virus2.zip" download>Download Virus 2</a>
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/000/574/782/small/vector60-5835-01.jpg" alt="Sign Out">
+                <a href="Sign Out.exe" download>Sign Out</a>
             </div>
             <div class="download-block">
-                <a href="virus3.zip" download>Download Virus 3</a>
+                <img src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/08/dead-computer-monitor.jpg" alt="Kill Computer">
+                <a href="Kill Computer.exe" download>Kill Computer</a>
             </div>
             <div class="download-block">
-                <a href="virus4.zip" download>Download Virus 4</a>
+                <img src="https://www.dairydiary.co.uk/wp-content/uploads/2021/03/Why-do-the-clocks-go-forward-in-the-UK.jpg" alt="Change Time">
+                <a href="Change Time.exe" download>Change Time</a>
             </div>
             <div class="download-block">
-                <a href="virus5.zip" download>Download Virus 5</a>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThF_ZRIt-xpfEPBa00iG6DJV9WD7grlhxQqQ&s" alt="Restart">
+                <a href="Restart.exe" download>Restart</a>
             </div>
         </div>
     </div>
